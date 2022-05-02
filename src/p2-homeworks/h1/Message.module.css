@@ -1,3 +1,22 @@
 .message {
+background-color: cadetblue;
+    border-radius: 30px;
+    width: 500px;
+    margin-left: 10px;
+}
+.message img {
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
 
+.window {
+    background-color: chartreuse;
+    width: 300px;
+    position: absolute;
+    margin-left: 100px;
+    padding: 10px;
+    border-radius: 30px;
 }
