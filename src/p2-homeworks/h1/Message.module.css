@@ -1,22 +1,44 @@
-.message {
-background-color: cadetblue;
-    border-radius: 30px;
-    width: 500px;
-    margin-left: 10px;
-}
-.message img {
-    margin-left: 10px;
-    margin-top: 5px;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
+body {
+    background-color: #946b6b;
 }
 
-.window {
-    background-color: chartreuse;
-    width: 300px;
-    position: absolute;
-    margin-left: 100px;
+.message {
+
+}
+
+.message img {
+    margin: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+
+.messageBlock {
+    box-sizing: border-box;
     padding: 10px;
-    border-radius: 30px;
+    color: #ffffff;
+    /*display: flex;*/
+    position: fixed;
+    min-height: 20px;
+    min-width: 50px;
+    max-width: 400px;
+    left: 100px;
+    border-radius: 20px 20px 20px 0;
+    margin: 8px 26px 8px 0;
+    font-size: 14px;
+    background-color: #107204;
+    word-break: break-word;
+
+}
+
+.nickName {
+    margin: 0 0 6px 10px;
+    font-weight: bold;
+    color: aquamarine;
+}
+
+.messageTime {
+    color: #5fb754;
 }
