@@ -4,7 +4,7 @@ import {Message} from './Message';
 export const messageData = {
     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
     name: 'Artem',
-    message: 'NPM старт нажимал???',
+    message: 'NPM старт нажимал111111111111111111111???',
     time: '22:00',
 }
 

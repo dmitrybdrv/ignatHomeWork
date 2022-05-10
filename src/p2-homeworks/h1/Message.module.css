@@ -1,13 +1,8 @@
-body {
-    background-color: #946b6b;
-}
-
 .message {
-
+    background-color: gold;
 }
-
 .message img {
-    margin: 10px;
+    margin: 40px 5px 0 50px;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -16,21 +11,7 @@ body {
 
 
 .messageBlock {
-    box-sizing: border-box;
-    padding: 10px;
     color: #ffffff;
-    /*display: flex;*/
-    position: fixed;
-    min-height: 20px;
-    min-width: 50px;
-    max-width: 400px;
-    left: 100px;
-    border-radius: 20px 20px 20px 0;
-    margin: 8px 26px 8px 0;
-    font-size: 14px;
-    background-color: #107204;
-    word-break: break-word;
-
 }
 
 .nickName {
@@ -41,4 +22,35 @@ body {
 
 .messageTime {
     color: #5fb754;
+}
+
+
+.messageBlock {
+    box-sizing: border-box;
+    padding: 10px;
+    min-height: 20px;
+    min-width: 50px;
+    margin-left: 70px;
+    max-width: 400px;
+    left: 60px;
+    font-size: 14px;
+    /*max-width: 250px;*/
+    /*max-height: 580px;*/
+    background-color: #082a04;
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px 10px 10px 6px;
+}
+
+.messageBlock:before {
+    content: "";
+    position: absolute;
+    right: 99%;
+    top: 55px;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 26px solid #082a04;
+    border-bottom: 1px solid transparent;
 }
