@@ -1,13 +1,22 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
 
-// types
-export type AffairPriorityType = any // need to fix any
-export type AffairType = any // need to fix any
+
+
+
+
+
+export type AffairPriorityType = 'high' | 'low' | 'middle'
+
+export type AffairType = {
+    name: string,
+    _id: number,
+    priority: FilterType
+}
+
 export type FilterType = 'all' | AffairPriorityType
 
-// constants
-const defaultAffairs: any = [ // need to fix any
+export const defaultAffairs: Array<AffairType> = [
     {_id: 1, name: 'React', priority: 'high'},
     {_id: 2, name: 'anime', priority: 'low'},
     {_id: 3, name: 'games', priority: 'low'},
@@ -15,28 +24,35 @@ const defaultAffairs: any = [ // need to fix any
     {_id: 5, name: 'html & css', priority: 'middle'},
 ]
 
-// pure helper functions
-export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
-    if (filter === 'all') return affairs
-    else return // need to fix
+export const deleteAffair = (affairs: AffairType[], _id: number): any => {
+    return affairs.filter((a: AffairType) => a._id !== _id)
 }
-export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
-    return // need to fix
+
+
+
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): any => {
+    if (filter === 'all') return affairs
+    return affairs.filter((a: AffairType) => a.priority === filter)
 }
 
 function HW2() {
-    const [affairs, setAffairs] = useState<any>(defaultAffairs) // need to fix any
-    const [filter, setFilter] = useState<FilterType>('all')
+
+    const deleteAffairCallback = (_affairs: AffairType[], _id: number) => {
+        setAffairs(_affairs.filter(() => !_id))
+    }
+    const [affairs, setAffairs] = useState <any>(defaultAffairs)
+
+
+
+
+    const [filter, setFilter] = useState <FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
-    const deleteAffairCallback = (_id: any) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
 
     return (
         <div>
             <hr/>
             homeworks 2
-
-            {/*should work (должно работать)*/}
             <Affairs
                 data={filteredAffairs}
                 setFilter={setFilter}
